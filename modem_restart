@@ -1,0 +1,5 @@
+#!/bin/sh
+
+node ~/soft-reset-modem-sample/restartModem.js
+
+sleep 3
