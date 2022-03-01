@@ -17,7 +17,7 @@ const screenshot = 'restart.png';
   const frame = await page.frames().find(f => f.name() === 'menuIframe');
   const restartDivButton = await frame.$('#RestartDiv');
   restartDivButton.click();
-  await page.waitFor(1000);
+  await page.waitForTimeout(1000);
   
   page.on('dialog', async dialog => {
     console.log('reboot accept');
