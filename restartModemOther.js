@@ -27,7 +27,7 @@ const screenshot = 'restart.png';
   const configFrame = await page.frames().find(f => f.name() === 'routermngtpageSrc');
   const btnRebootButton = await configFrame.$('#btnReboot');
   btnRebootButton.click();
-  await page.waitFor(1000);
+  await page.waitForTimeout(1000);
   
   console.log('reboot')
 
